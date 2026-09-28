@@ -1,0 +1,135 @@
+{
+  "config": {
+    "classifier": "ensemble",
+    "retrieval": "dense",
+    "retrieval_intent_weight": 0.6,
+    "retrieval_temperature": 0.1,
+    "confidence_threshold": 0.4
+  },
+  "dev": {
+    "n": 54,
+    "intent_accuracy_classifier_only": 0.907,
+    "intent_accuracy_final": 0.944,
+    "routing_accuracy": 0.981,
+    "top_article_accuracy": 0.926,
+    "escalation_rate": 0.352,
+    "p50_latency_ms": 40.4,
+    "p95_latency_ms": 165.1,
+    "confidence_threshold_tradeoff": [
+      {
+        "threshold": 0.3,
+        "auto_handled": 0.889,
+        "accuracy_on_auto_handled": 0.958
+      },
+      {
+        "threshold": 0.4,
+        "auto_handled": 0.704,
+        "accuracy_on_auto_handled": 0.947
+      },
+      {
+        "threshold": 0.5,
+        "auto_handled": 0.463,
+        "accuracy_on_auto_handled": 1.0
+      },
+      {
+        "threshold": 0.55,
+        "auto_handled": 0.259,
+        "accuracy_on_auto_handled": 1.0
+      },
+      {
+        "threshold": 0.6,
+        "auto_handled": 0.148,
+        "accuracy_on_auto_handled": 1.0
+      },
+      {
+        "threshold": 0.7,
+        "auto_handled": 0.056,
+        "accuracy_on_auto_handled": 1.0
+      }
+    ]
+  },
+  "test": {
+    "n": 54,
+    "intent_accuracy_classifier_only": 0.833,
+    "intent_accuracy_final": 0.87,
+    "routing_accuracy": 1.0,
+    "top_article_accuracy": 0.944,
+    "escalation_rate": 0.278,
+    "p50_latency_ms": 38.0,
+    "p95_latency_ms": 143.1,
+    "confidence_threshold_tradeoff": [
+      {
+        "threshold": 0.3,
+        "auto_handled": 0.907,
+        "accuracy_on_auto_handled": 0.898
+      },
+      {
+        "threshold": 0.4,
+        "auto_handled": 0.741,
+        "accuracy_on_auto_handled": 0.975
+      },
+      {
+        "threshold": 0.5,
+        "auto_handled": 0.574,
+        "accuracy_on_auto_handled": 1.0
+      },
+      {
+        "threshold": 0.55,
+        "auto_handled": 0.481,
+        "accuracy_on_auto_handled": 1.0
+      },
+      {
+        "threshold": 0.6,
+        "auto_handled": 0.296,
+        "accuracy_on_auto_handled": 1.0
+      },
+      {
+        "threshold": 0.7,
+        "auto_handled": 0.148,
+        "accuracy_on_auto_handled": 1.0
+      }
+    ]
+  },
+  "all": {
+    "n": 108,
+    "intent_accuracy_classifier_only": 0.87,
+    "intent_accuracy_final": 0.907,
+    "routing_accuracy": 0.991,
+    "top_article_accuracy": 0.935,
+    "escalation_rate": 0.315,
+    "p50_latency_ms": 47.1,
+    "p95_latency_ms": 192.3,
+    "confidence_threshold_tradeoff": [
+      {
+        "threshold": 0.3,
+        "auto_handled": 0.898,
+        "accuracy_on_auto_handled": 0.928
+      },
+      {
+        "threshold": 0.4,
+        "auto_handled": 0.722,
+        "accuracy_on_auto_handled": 0.962
+      },
+      {
+        "threshold": 0.5,
+        "auto_handled": 0.519,
+        "accuracy_on_auto_handled": 1.0
+      },
+      {
+        "threshold": 0.55,
+        "auto_handled": 0.37,
+        "accuracy_on_auto_handled": 1.0
+      },
+      {
+        "threshold": 0.6,
+        "auto_handled": 0.222,
+        "accuracy_on_auto_handled": 1.0
+      },
+      {
+        "threshold": 0.7,
+        "auto_handled": 0.102,
+        "accuracy_on_auto_handled": 1.0
+      }
+    ]
+  }
+}

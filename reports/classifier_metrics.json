@@ -1,0 +1,216 @@
+{
+  "dataset": {
+    "train_plus_val": 21676,
+    "test": 2409,
+    "realistic_tickets": 108,
+    "intents": 27
+  },
+  "production_model": {
+    "mode": "ensemble",
+    "tfidf_C": 30.0,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "tfidf_weight": 0.3,
+    "train_seconds": 24.0
+  },
+  "model_comparison": {
+    "tfidf_lr": {
+      "in_distribution_test": {
+        "accuracy": 0.9983,
+        "macro_f1": 0.9983,
+        "ms_per_ticket_batched": 0.065
+      },
+      "realistic_tickets": {
+        "accuracy": 0.7315,
+        "macro_f1": 0.7293,
+        "ms_per_ticket_batched": 0.068
+      }
+    },
+    "embedding_lr": {
+      "in_distribution_test": {
+        "accuracy": 0.9963,
+        "macro_f1": 0.9957,
+        "ms_per_ticket_batched": 0.995
+      },
+      "realistic_tickets": {
+        "accuracy": 0.8241,
+        "macro_f1": 0.8208,
+        "ms_per_ticket_batched": 3.734
+      }
+    },
+    "ensemble": {
+      "in_distribution_test": {
+        "accuracy": 0.9979,
+        "macro_f1": 0.9978,
+        "ms_per_ticket_batched": 1.08
+      },
+      "realistic_tickets": {
+        "accuracy": 0.8704,
+        "macro_f1": 0.8698,
+        "ms_per_ticket_batched": 3.628
+      }
+    }
+  },
+  "robustness_by_variation": {
+    "typos / noise": {
+      "n": 483,
+      "accuracy": 0.9917
+    },
+    "colloquial": {
+      "n": 810,
+      "accuracy": 0.9963
+    },
+    "keyword-only": {
+      "n": 136,
+      "accuracy": 1.0
+    },
+    "lexical variation": {
+      "n": 2193,
+      "accuracy": 0.9982
+    },
+    "morphological variation": {
+      "n": 466,
+      "accuracy": 1.0
+    },
+    "offensive language": {
+      "n": 111,
+      "accuracy": 1.0
+    },
+    "complex / multi-clause": {
+      "n": 245,
+      "accuracy": 0.9918
+    }
+  },
+  "realistic_tickets_threshold_tradeoff": [
+    {
+      "threshold": 0.0,
+      "auto_handled": 1.0,
+      "accuracy_on_auto_handled": 0.8704
+    },
+    {
+      "threshold": 0.3,
+      "auto_handled": 0.9815,
+      "accuracy_on_auto_handled": 0.8679
+    },
+    {
+      "threshold": 0.4,
+      "auto_handled": 0.8889,
+      "accuracy_on_auto_handled": 0.9062
+    },
+    {
+      "threshold": 0.5,
+      "auto_handled": 0.7685,
+      "accuracy_on_auto_handled": 0.9157
+    },
+    {
+      "threshold": 0.55,
+      "auto_handled": 0.7037,
+      "accuracy_on_auto_handled": 0.9211
+    },
+    {
+      "threshold": 0.6,
+      "auto_handled": 0.6574,
+      "accuracy_on_auto_handled": 0.9437
+    },
+    {
+      "threshold": 0.7,
+      "auto_handled": 0.5463,
+      "accuracy_on_auto_handled": 1.0
+    },
+    {
+      "threshold": 0.8,
+      "auto_handled": 0.4815,
+      "accuracy_on_auto_handled": 1.0
+    },
+    {
+      "threshold": 0.9,
+      "auto_handled": 0.3704,
+      "accuracy_on_auto_handled": 1.0
+    }
+  ],
+  "realistic_ticket_errors": [
+    {
+      "text": "trying to buy a gift for my mom, how do i check out as a guest without making an account",
+      "true": "place_order",
+      "pred": "create_account",
+      "confidence": 0.527
+    },
+    {
+      "text": "Is there a penalty for cancelling an engraved item after ordering?",
+      "true": "check_cancellation_fee",
+      "pred": "cancel_order",
+      "confidence": 0.605
+    },
+    {
+      "text": "How much does it cost to cancel an order that's already packed?",
+      "true": "check_cancellation_fee",
+      "pred": "cancel_order",
+      "confidence": 0.699
+    },
+    {
+      "text": "Where is my package?? Order #C-12345 was supposed to arrive Tuesday.",
+      "true": "track_order",
+      "pred": "delivery_period",
+      "confidence": 0.642
+    },
+    {
+      "text": "Hi, how do I find out where my parcel is right now?",
+      "true": "track_order",
+      "pred": "delivery_period",
+      "confidence": 0.579
+    },
+    {
+      "text": "Can the parcel be sent to my work address instead of home? It hasn't shipped yet.",
+      "true": "change_shipping_address",
+      "pred": "set_up_shipping_address",
+      "confidence": 0.397
+    },
+    {
+      "text": "Are gift cards refundable?",
+      "true": "check_refund_policy",
+      "pred": "get_refund",
+      "confidence": 0.619
+    },
+    {
+      "text": "This product is nothing like the pictures. I demand a refund.",
+      "true": "get_refund",
+      "pred": "check_refund_policy",
+      "confidence": 0.329
+    },
+    {
+      "text": "I was charged twice for the same order!! Please fix this immediately.",
+      "true": "payment_issue",
+      "pred": "cancel_order",
+      "confidence": 0.354
+    },
+    {
+      "text": "How do I register on your site?",
+      "true": "create_account",
+      "pred": "registration_problems",
+      "confidence": 0.387
+    },
+    {
+      "text": "Never got the verification email after creating my account.",
+      "true": "registration_problems",
+      "pred": "create_account",
+      "confidence": 0.572
+    },
+    {
+      "text": "How do I change the email address on my profile?",
+      "true": "edit_account",
+      "pred": "change_shipping_address",
+      "confidence": 0.403
+    },
+    {
+      "text": "Worst customer experience ever. I've been waiting for weeks and nobody answers. I'm considering a chargeback.",
+      "true": "complaint",
+      "pred": "contact_customer_service",
+      "confidence": 0.397
+    },
+    {
+      "text": "want to rate my purchase, where do i do that",
+      "true": "review",
+      "pred": "place_order",
+      "confidence": 0.417
+    }
+  ]
+}

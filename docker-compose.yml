@@ -1,0 +1,12 @@
+services:
+  supportpilot:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      - ticket-db:/app/var
+volumes:
+  ticket-db:

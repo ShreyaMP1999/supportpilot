@@ -1,0 +1,406 @@
+text,intent
+"I don't want this item, help me cancel purchase {{Order Number}}",cancel_order
+i dont want purchase {{Order Number}} could i cancel it,cancel_order
+canmcel order {{Order Number}},cancel_order
+canceling purechase {{Order Number}},cancel_order
+cancel order {{Order Number}},cancel_order
+problem with canceling order {{Order Number}},cancel_order
+iwant assistance canceling order {{Order Number}},cancel_order
+I have got to cancel order {{Order Number}},cancel_order
+could you help me cancelling purchase {{Order Number}}?,cancel_order
+I need helpto cancel order {{Order Number}},cancel_order
+i need help with cancelliung order {{Order Number}},cancel_order
+assistance canceling order {{Order Number}},cancel_order
+"I bought some articles, how to cancel order {{Order Number}}?",cancel_order
+"I bought some articles, help me to cancel order {{Order Number}}",cancel_order
+need help with cfanceling order {{Order Number}},cancel_order
+I have to add some articles to order {{Order Number}},change_order
+can I delete some articles from order {{Order Number}}?,change_order
+I mised a product in purchase {{Order Number}},change_order
+need help to swap a fucking article of purchase {{Order Number}},change_order
+wamna switch some products of order {{Order Number}},change_order
+help me to change a product of purchase {{Order Number}},change_order
+how could I swap several items of purchase {{Order Number}}?,change_order
+help to swap a product of order {{Order Number}},change_order
+help to remove several articles from purchase {{Order Number}},change_order
+could uhelp me correct order {{Order Number}},change_order
+assistance adding some items to purchase {{Order Number}},change_order
+i need help with swapping something of order {{Order Number}},change_order
+wanna change some items of order {{Order Number}},change_order
+editing order {{Order Number}},change_order
+edit ordr {{Order Number}},change_order
+i submitted an wrong address how can i edit it,change_shipping_address
+i need assistance with a shipping address correction,change_shipping_address
+I want assistance to modify the shipping address,change_shipping_address
+there are issues correcting my shipping address,change_shipping_address
+i have an error trying to edit the address,change_shipping_address
+i chose a wrong address by mistake colud ya modify it,change_shipping_address
+can uhelp me to correct my delivery address,change_shipping_address
+could you give me information about an address correction?,change_shipping_address
+there is a trouble trying to update the shipping address,change_shipping_address
+their is a problem trying to update my delivery address,change_shipping_address
+i have problems changing my shipping addresw,change_shipping_address
+i want support trying to change my delivery address,change_shipping_address
+I need assistance with a shipping address update,change_shipping_address
+there are errors trying to edit my shipping address,change_shipping_address
+issues updating shipping address,change_shipping_address
+I have  got to see the termination charges,check_cancellation_fee
+could uhelp me check the cancellation penalty,check_cancellation_fee
+I have got to see the early exit penalpties,check_cancellation_fee
+i dont know how i can check the early termination charges,check_cancellation_fee
+need help to check the termination fee,check_cancellation_fee
+"I cannot find the early termination fee, I need help",check_cancellation_fee
+how to see the cancellation penalty,check_cancellation_fee
+I need help checking the withdrawal fee,check_cancellation_fee
+I can't find the cancellation charges,check_cancellation_fee
+help me to check the termination charges,check_cancellation_fee
+I want help to check the early termination charges,check_cancellation_fee
+want help to check the early termination fees,check_cancellation_fee
+what is the early exit penalty,check_cancellation_fee
+"I need to check the termination charge, how to do it?",check_cancellation_fee
+i need help seeing the cancellation charges,check_cancellation_fee
+how do I give a quick look at the invoice from {{Person Name}}?,check_invoice
+need to give a quick look at the invoice from {{Person Name}},check_invoice
+what do i have to do to check my invoice from {{Person Name}},check_invoice
+could you help me to locate the bills from {{Person Name}}?,check_invoice
+I need help to find invoice #12588,check_invoice
+"I have to check my bill from {{Person Name}}, how can I do it?",check_invoice
+"I can't find my bills from {{Person Name}}, find them for me",check_invoice
+can I take a quick look at the bill #00108?,check_invoice
+"I need to give a quick look at invoice #85632, help me",check_invoice
+I don't know how to check my invoice from {{Person Name}},check_invoice
+I want to look for my bill #12588,check_invoice
+is it possible tocheck invoice #37777,check_invoice
+i do not know how to look for my invoice from {{Person Name}},check_invoice
+where can I find the invoice #85632?,check_invoice
+how could ilook for the bills from {{Person Name}},check_invoice
+help me check your fucking accepted payment methods,check_payment_methods
+see the allowed payment options,check_payment_methods
+I want to check the bloody payment options,check_payment_methods
+i have to list ur accepted payment options how to do it,check_payment_methods
+"I need to see your available payment methods, how to do it?",check_payment_methods
+"I have to list your allowed payment options, how do I do it?",check_payment_methods
+I have to check the accepted payment modalities,check_payment_methods
+help me see the allowed payment options,check_payment_methods
+i want assistance to list the payment methods,check_payment_methods
+i want help to check ur accepted payment methods,check_payment_methods
+I want assistance seeing your payment options,check_payment_methods
+how to see the allowed payment options,check_payment_methods
+wanna list the available payment methods can ya help me,check_payment_methods
+I do not know how I can list the accepted payment modalitiws,check_payment_methods
+show me the payment methods,check_payment_methods
+"I need to check your reimbursement policy, hbow to do it?",check_refund_policy
+check in which situations can i request an refund,check_refund_policy
+help seeing your refund policy,check_refund_policy
+help me see in wht cases can I request reimbursements,check_refund_policy
+help me checking in which cases can i request reimbursements,check_refund_policy
+i have to check how long reufnds take how to do it,check_refund_policy
+i have gotto check ur damn refund policy help me,check_refund_policy
+i have got to see in which cases can i request my money back,check_refund_policy
+need help to see in what cases can I request my money back,check_refund_policy
+i have to check in what cases can i request a reimbursement,check_refund_policy
+see in which situations can i request to be reimbursed,check_refund_policy
+in which situations can I ask for refunds?,check_refund_policy
+help to see in which casescan i request reimbursements,check_refund_policy
+help to check in which situations can I ask for refunds,check_refund_policy
+I have to check in what situations can I request a refund,check_refund_policy
+wanna make a damn claim willuhelp me,complaint
+where to lodge a reclamation against your business ?,complaint
+"I have got to lodge a customer complaint, help me",complaint
+assistance to file a customer claim,complaint
+assistance filing a customer complaint against ur company,complaint
+how do I make a customer complaint against your company?,complaint
+help to file a consumer complaint,complaint
+I habe got to file a complaint,complaint
+help me file a reclamation against your organization,complaint
+I want assistance to lodge a customer reclamation,complaint
+help filing a consumer complaint against your organization,complaint
+wanna oldge a claim against ur company will uhelp me,complaint
+I have got to make a complaint against your company,complaint
+how can i make a customer complaint against ur organization,complaint
+i need assistance making a claim against ur company,complaint
+I want to speak with customer assistance,contact_customer_service
+want assistance to talk to customer service,contact_customer_service
+I have to see what hours I can call customer service,contact_customer_service
+I don't know what to do to speak with cusstomer service,contact_customer_service
+help getting in touch with customer assistance,contact_customer_service
+wanna see at what time customer service available is,contact_customer_service
+I do not know what I need to do to contact customer service,contact_customer_service
+do you have a toll-free number to contact customer support?,contact_customer_service
+need help calling damn customer assistanec,contact_customer_service
+calling customer assistance,contact_customer_service
+need to call customer service,contact_customer_service
+I want to see at what time I can call customer assistance,contact_customer_service
+check what hours I can get in touch with customer service,contact_customer_service
+I want help to check what hours I can reach customer service,contact_customer_service
+i dont know whatto do to talk to customer assistance,contact_customer_service
+i dont know how i can speak to someone,contact_human_agent
+uare not helpful could uhelp me talk to a damn agent,contact_human_agent
+I don't know what I need to do to speak with a human agent,contact_human_agent
+need help speaking with an agent,contact_human_agent
+I want to contact a person,contact_human_agent
+help mke chatting with a person,contact_human_agent
+I do not know what I need to do to contact an operator,contact_human_agent
+"I don't understand you, how could I chat with a damn person?",contact_human_agent
+I don't know what I have to do to talk to someone,contact_human_agent
+can I talk with an assistant?,contact_human_agent
+i want help speaking to a person,contact_human_agent
+is it possible to contactr a person,contact_human_agent
+"I don't understand you, can you help me talk with an agent?",contact_human_agent
+"I want to talk with a person, I need assistance",contact_human_agent
+help me speak with somebody,contact_human_agent
+creating freemium account,create_account
+i cannot create a {{Account Category}}  account,create_account
+how do I create a {{Account Category}} account?,create_account
+open another pro account,create_account
+help with creating a standard account,create_account
+I need help opening a standard account,create_account
+could you help me create a standard account for my daughter?,create_account
+I want assistance to open a {{Account Category}} account for my fiance,create_account
+could utell me more about creating {{Account Type}} accounts,create_account
+opening new standard account for daughter,create_account
+i aint registered yet assistance creating a {{Account Type}} account,create_account
+problem with creating my freemium account,create_account
+where do i create a new fucking standard account,create_account
+i do not have a standard account assistance registering,create_account
+help me creting a {{Account Type}} account,create_account
+i do not know what i need to do to remove a {{Account Type}} account,delete_account
+I have problems with the termination of my standard account,delete_account
+closing  platinum account,delete_account
+"I never use my {{Account Type}} account, I don't know how I can close it",delete_account
+I want informatoin about the cancellation of my {{Account Type}} account,delete_account
+I have problems with {{Account Type}} account removal,delete_account
+need help to cancel a standard account,delete_account
+how can I delete the standard account?,delete_account
+close standard account,delete_account
+"I don't want my {{Account Type}} account, how could I close it?",delete_account
+have a problem with platinum account deletions,delete_account
+i don use my {{Account Type}} account i dont know how i can cancel it,delete_account
+"I do not want my freemium account, I need help closing it",delete_account
+have problems with the deletion of my gold account,delete_account
+i dont use m platinum account i try to remove it,delete_account
+"I am looking for the shipping options, help me find them",delivery_options
+checking the available options for shipment,delivery_options
+"I have got to check what shipment methods I have, help me",delivery_options
+where do I see what methods for delivery are there?,delivery_options
+how to check what delivery methods I have?,delivery_options
+could I order from {{Delivery Country}}?,delivery_options
+want help seeing what delivery options are there,delivery_options
+what are the available methods for shipment?,delivery_options
+I need to check what shipment methods I have,delivery_options
+want assistance checking what shipment methods i have,delivery_options
+help me check what methods for delivery you offer,delivery_options
+is it possible to order from {{Delivery Country}}?,delivery_options
+help seeing the delivery options,delivery_options
+where do I see what shipping options I have?,delivery_options
+is it possible to place na order from {{Delivery Country}},delivery_options
+where to see how long it takes for the item to arrive?,delivery_period
+want help checking how soon can I expect myy product,delivery_period
+how do I check how soon can I expect my purchase?,delivery_period
+is it possible to check how soon can I expect the package?,delivery_period
+need assistnce to see how soon can I expect the purchase,delivery_period
+can uhelp me check how soon can i epect the delivery,delivery_period
+"I need to see how soon can I expect my item, how to do it?",delivery_period
+I have to see how soon can I expect my package,delivery_period
+need help to see when my product is gonna arrive,delivery_period
+help to check how soon can I expect the purchase,delivery_period
+how do I check when will my item arrive?,delivery_period
+I have to check when will my package arrive,delivery_period
+assistance checking when my article is going to arrive,delivery_period
+I'mlooking for shipping period can uhelp me find them,delivery_period
+I want to know more about shipping periods,delivery_period
+correcting data on gold account,edit_account
+correct details on gold account,edit_account
+modifying info on pro account,edit_account
+change details on platinum account,edit_account
+editing information on account,edit_account
+modifying info on freemium accoumt,edit_account
+modify data on freemium account,edit_account
+correcting info on {{Account Type}} aqccount,edit_account
+i have got to correct the information included on my user,edit_account
+updating {{Account Category}} account,edit_account
+can you help me to modify my user information?,edit_account
+modify data on premium account,edit_account
+modify information on gold account,edit_account
+changing information on {{Account Category}} account,edit_account
+edit info on {{Account Category}} accunt,edit_account
+i dont know what i need to do to get the invoice #85632,get_invoice
+what do i have to do to download the bills from {{Person Name}},get_invoice
+how to get my bill from {{Person Name}},get_invoice
+i dont know what i have to do to get the invoice #00108,get_invoice
+I'm trying to get my invoice from {{Person Name}},get_invoice
+i dont know what i nede to do to get the bill #00108,get_invoice
+mail me my bill from {{Person Name}},get_invoice
+I want help downloading bill #00108,get_invoice
+assistance to get my bills from {{Person Name}},get_invoice
+need assistance to get the invoices from {{Person Name}},get_invoice
+how do I download the invoive from 6 last weeks?,get_invoice
+i dont know what ineed to do to download invoice #12588,get_invoice
+where can I get the bill #85632?,get_invoice
+i do not know what to do to download the invoice #85632,get_invoice
+need help getting the invoices from {{Person Name}},get_invoice
+i do not know how i could obtaain compensations,get_refund
+is it possible toreceive refunds of money?,get_refund
+i have got to obtain an reimbursement of money,get_refund
+i want help obtaining compensations of money,get_refund
+i want help to demand reimbursements,get_refund
+help me ot get a restitution of my money,get_refund
+get refund,get_refund
+need assistance t ask for refunds of money,get_refund
+I don't know how to demand a restitution of my money,get_refund
+I have got to obtain a compensation of money,get_refund
+I do not know how I could ask for goddamn refunds,get_refund
+I want help requesting my money back,get_refund
+getting money back,get_refund
+I don't know how I can get a restitution of money,get_refund
+how do I request a compensation of money?,get_refund
+can uhelp me to unsubscribe from the corporate newsletter,newsletter_subscription
+i cant subscribe to thecorporate newsletter,newsletter_subscription
+how do I check the status of my newsletter subscription?,newsletter_subscription
+I try to cancel my subscription to the corporate newsletter,newsletter_subscription
+I want help receiving the newsletter,newsletter_subscription
+i do not know how to unsubscribe to ur corporate newslegter,newsletter_subscription
+how do i cancel the subscription to ur company newsletter,newsletter_subscription
+I have got to check the status of my newsletter subscription,newsletter_subscription
+could you help me receiving the corporate newsletter?,newsletter_subscription
+I do not know what to do to sign up to the newsletter,newsletter_subscription
+I want help cancelling my newsletter subscription,newsletter_subscription
+where can I unsubscribe to your companynewsletter?,newsletter_subscription
+i have to cancel the subscription to ur company newsletter,newsletter_subscription
+could I cancel my corporate newsletter subscription?,newsletter_subscription
+I need assistance to receive the company newsletter,newsletter_subscription
+where could I notify of a payment issue?,payment_issue
+can you help me to solve issues with online payment?,payment_issue
+how do I report errors with online payments ?,payment_issue
+"I cannot make payments, could you help me report errors?",payment_issue
+solve problems with apyment,payment_issue
+assistance with payment,payment_issue
+I want to notify of an error with payments,payment_issue
+help notifying of issues with payments,payment_issue
+I do not know what I need to do to inform of paymdnt errors,payment_issue
+I have got to inform of an issue with online payments,payment_issue
+help me inform of an error with online payment,payment_issue
+troubles with payments,payment_issue
+help solving issues with online payments,payment_issue
+where can I notify of troubles with payment?,payment_issue
+I do not know how to notify of a trouble with payment,payment_issue
+can you help me earn an few of your item?,place_order
+I want to acquire a few of your article,place_order
+I need assistance to earn several products,place_order
+wanna purchase  several products,place_order
+i have got to acquire somethingi need assistance,place_order
+how can I purchase some of your article?,place_order
+"I want to purchase a few of your item, how do I do it?",place_order
+can you help me earning several of your article?,place_order
+I do not know how to earn a few of your item,place_order
+need assistance ordering some of ur item,place_order
+"I want to earn some goddamn items, I need assistance",place_order
+I want help ordering several articlers,place_order
+I do not know what I have to do to shop some articles,place_order
+I do not know how I can earn some products,place_order
+want help to purchase some of your product,place_order
+would it be possible to retrieve my user account access key?,recover_password
+is it possible to restore my user PIN?,recover_password
+I want assistance to retrieve my profile PIN code,recover_password
+help to reset my user account ipn code,recover_password
+help me retrieve the key of my account,recover_password
+I want help restoring my user account PIN,recover_password
+I am oloking for information about the pass reset,recover_password
+I'm looking for information about thbe forgotten access key,recover_password
+I need help resetting the keyof my user profile,recover_password
+can i restoire my pass,recover_password
+I need help retrieving the access key of my account,recover_password
+I want help resetting the password of my user profile,recover_password
+question about my lost access key,recover_password
+would it be possible to recover my profile PIN code?,recover_password
+I am trying to find information about my access key recovery,recover_password
+where to notify of errors with sign-up?,registration_problems
+I want to inform of problems with a registration,registration_problems
+help me reporting an issue with a registration,registration_problems
+have a questoon about creating user profiles,registration_problems
+I can't notify of issues with a registration,registration_problems
+notify of problem with signup,registration_problems
+I cannot report errors with a registration,registration_problems
+report issues creating account,registration_problems
+i want help regarding my sign-up,registration_problems
+i cant open a profile where do i inform of a sign-up issue,registration_problems
+need assistance notifying of a signup issue,registration_problems
+"I want to inform of a registration error, how can I do it?",registration_problems
+can I notify of a registration error?,registration_problems
+help me to inform of a registration issue,registration_problems
+I want help to inform of a sign-up problem,registration_problems
+wanna leave a review about a service,review
+need assistance leaving feedback about ur company,review
+I need help submitting my feedback for your company,review
+can you help me write a comment about your products?,review
+can you help me leave my feedback about your products?,review
+i have to leave feedback for ur company,review
+"I would like to leave a comment for your company, help me",review
+could you help me to write an opinion for your company?,review
+I don't know how I can leave a review,review
+I want to leave an opniion for your company,review
+can I leave feedback about a servic?,review
+review for your services,review
+what do I have to do to send feedback about a product?,review
+want help leaving some damn feedback fora product,review
+do you have a method to send an opinion for a product?,review
+can I enter my secondary delivery address?,set_up_shipping_address
+I don't know how to enter the new delivery address,set_up_shipping_address
+could i submit my secondary shipping address,set_up_shipping_address
+help me submitting the new delivery address,set_up_shipping_address
+i want help to set another shipping address up,set_up_shipping_address
+submit my secondary shipping address,set_up_shipping_address
+wanna enter a new shipping address,set_up_shipping_address
+i watn help to set my delivery address up,set_up_shipping_address
+there is a trouble setting another delivery address up,set_up_shipping_address
+issue submitting the secondary delivery address,set_up_shipping_address
+could I enter a new delivery address?,set_up_shipping_address
+I have rpoblems setting the new delivery address up,set_up_shipping_address
+i try to submit my delivery address,set_up_shipping_address
+i have a problem setting a secondary shipping address up,set_up_shipping_address
+"I want to submit my new shipping address, how do I do it?",set_up_shipping_address
+wanna use thed freemium profile can ya help me,switch_account
+change to the gold account,switch_account
+I want help using the pro profile,switch_account
+swithcing to gold account,switch_account
+i have to use the freemium profile,switch_account
+i want help using the {{Account Type}} profile,switch_account
+assistance to change to the {{Account Category}} account,switch_account
+i need help using the freemium account,switch_account
+"I need to change to the {{Account Category}} account, how to do it?",switch_account
+I don't know what to do to change to the pro account,switch_account
+use platinum account,switch_account
+where to change to the pro account,switch_account
+swithcing to platinum account,switch_account
+change to {{Account Type}} acount,switch_account
+what do I have to do to switch to the freemium account?,switch_account
+I try to track order {{Order Number}},track_order
+how to see the status of order {{Order Number}},track_order
+can i check purchase {{Order Number}} status,track_order
+i have got to see order {{Order Number}} status i need assistane,track_order
+help me to check order {{Order Number}} goddamn current status,track_order
+I am trying to see order {{Order Number}} status,track_order
+I do not know how to check the status of order {{Order Number}},track_order
+i need help seeing the status of purchase {{Order Number}},track_order
+what do I need to do to see order {{Order Number}} status?,track_order
+wanna see the eta of order {{Order Number}} how can i do it,track_order
+help checking the ETA of purchase {{Order Number}},track_order
+i dont know how to check purchase {{Order Number}} status,track_order
+can i check order {{Order Number}} current status,track_order
+I don't know how I could see purchase {{Order Number}} status,track_order
+i need help checking the ET of the purchase {{Order Number}},track_order
+need help seeing my rebate status,track_refund
+I am waiting for an refund of {{Currency Symbol}}{{Refund Amount}},track_refund
+I ned help checking the rebate current status,track_refund
+I want assistance checking my refund status,track_refund
+assistance checking the current status of my restitution,track_refund
+I want help seeing if there are any news on my reimbursement,track_refund
+help me checking if there are any news on my refund,track_refund
+help to see the status of my rebate,track_refund
+help me checking if there are any updates on my restitution,track_refund
+I am waiting for a bloody compensation of {{Refund Amount}} dollars,track_refund
+how to see the status of the compensation?,track_refund
+"I need to see my rebate current status, will you help me?",track_refund
+I need assistance checking my compensation status,track_refund
+there is anything new on my rebate,track_refund
+I need help to check the current status of my refund,track_refund

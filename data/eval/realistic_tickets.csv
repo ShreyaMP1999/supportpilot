@@ -1,0 +1,109 @@
+text,intent
+"Hi, I want to buy the blue ceramic vase I saw on your homepage but I can't figure out how to actually complete the purchase. Is there a way to order it?",place_order
+Can I order 3 of the standing desks for our office? What's the process?,place_order
+"trying to buy a gift for my mom, how do i check out as a guest without making an account",place_order
+"Hello, I'd like to purchase the winter jacket in size M. Can you walk me through placing the order?",place_order
+I just ordered sneakers (order #A-48213) but picked size 9 instead of 10. Can I swap the size before it ships?,change_order
+"Need to add a second phone case to the order I placed an hour ago, is that possible?",change_order
+I accidentally ordered 5 lamps instead of 1. Please update the quantity on my order!,change_order
+Can I modify my existing order to switch the color from black to grey?,change_order
+"Please cancel order #B-99120, I found it cheaper elsewhere.",cancel_order
+I placed an order by mistake this morning and need to cancel it right away,cancel_order
+"hey can u cancel my last order, dont need it anymore",cancel_order
+I want to cancel my purchase from yesterday. The order number is 55821.,cancel_order
+"If I cancel my order now, will I be charged anything?",check_cancellation_fee
+Is there a penalty for cancelling an engraved item after ordering?,check_cancellation_fee
+How much does it cost to cancel an order that's already packed?,check_cancellation_fee
+Do you charge a fee for cancellations? Thinking about cancelling but don't want to lose money.,check_cancellation_fee
+Where is my package?? Order #C-12345 was supposed to arrive Tuesday.,track_order
+Can you tell me the status of my order? I ordered a week ago and haven't heard anything.,track_order
+"my tracking number isnt updating, where is my stuff",track_order
+"Hi, how do I find out where my parcel is right now?",track_order
+Do you offer next-day shipping? I need something by Friday.,delivery_options
+What shipping methods do you have for international orders to Canada?,delivery_options
+Can I pick up my order in store instead of having it delivered?,delivery_options
+what are my options for faster delivery,delivery_options
+How long does standard shipping usually take?,delivery_period
+"If I order today, when will it arrive in Chicago?",delivery_period
+How many days for express delivery?,delivery_period
+"I'm ordering a birthday present, roughly how long until it gets delivered?",delivery_period
+How do I add a new delivery address to my account? I just moved.,set_up_shipping_address
+I want to save my office address so I can ship there by default.,set_up_shipping_address
+where do i put a second address for shipping,set_up_shipping_address
+Can I set up multiple shipping addresses in my profile?,set_up_shipping_address
+I entered the wrong street number on order #D-7781. Can you change the delivery address?,change_shipping_address
+"Need to update the shipping address for my order, I'm moving next week!",change_shipping_address
+"the address on my order is my old apartment, please ship it to my new place instead",change_shipping_address
+Can the parcel be sent to my work address instead of home? It hasn't shipped yet.,change_shipping_address
+What's your return policy? Can I get my money back if the shoes don't fit?,check_refund_policy
+Are gift cards refundable?,check_refund_policy
+How many days do I have to return something for a refund?,check_refund_policy
+do you refund opened items or only unused ones,check_refund_policy
+The blender arrived broken. I want my money back.,get_refund
+I returned the jacket and want a full refund to my card please.,get_refund
+How do I request a refund for an item I don't want anymore?,get_refund
+This product is nothing like the pictures. I demand a refund.,get_refund
+I sent my return back two weeks ago and still haven't seen the refund. Where is it?,track_refund
+When will my refund hit my bank account? It says approved.,track_refund
+Can you check on the status of my refund for order #E-2231?,track_refund
+"been waiting forever for my money back, any update on the refund??",track_refund
+Do you take PayPal?,check_payment_methods
+Can I pay with Apple Pay or only credit card?,check_payment_methods
+Is it possible to pay in installments?,check_payment_methods
+What payment options do you accept? Is crypto an option?,check_payment_methods
+My card keeps getting declined at checkout even though I have money in the account.,payment_issue
+I was charged twice for the same order!! Please fix this immediately.,payment_issue
+Payment failed but the money was still taken from my account. What is going on?,payment_issue
+The promo code isn't working and checkout gives me a payment error.,payment_issue
+Can I see the invoice for my last purchase? I need to check the tax amount.,check_invoice
+Where can I view my past bills?,check_invoice
+I need to double-check the amounts on invoice for order #F-3321.,check_invoice
+how do i look at my invoice online,check_invoice
+"Please send me a PDF invoice for order 44129, I need it for my expense report.",get_invoice
+I need a VAT invoice with my company name on it. How do I get one?,get_invoice
+Can you email me a copy of my receipt/invoice?,get_invoice
+download invoice?? need it for accounting,get_invoice
+I'd like to sign up for an account so I can track my orders.,create_account
+How do I register on your site?,create_account
+"want to make an account with my google login, is that possible",create_account
+Can you help me open a new customer account?,create_account
+I'm trying to sign up but it says my email is already in use. I've never registered before!,registration_problems
+Never got the verification email after creating my account.,registration_problems
+The sign up form keeps giving me an error about my password.,registration_problems
+"registration page is broken, cant create account",registration_problems
+How do I change the email address on my profile?,edit_account
+I got married and need to update my last name on my account.,edit_account
+Need to update my phone number in my account details.,edit_account
+where can i edit my profile info,edit_account
+How do I change my personal account to a business account?,switch_account
+I have two accounts and want to log into the other one. How do I switch?,switch_account
+Can I upgrade my account to Plus membership?,switch_account
+I want to switch to a different account type.,switch_account
+I forgot my password and can't log in.,recover_password
+The password reset link isn't arriving in my inbox. Help!,recover_password
+"locked out of my account, need to reset my pw",recover_password
+How do I recover access to my account? I don't remember my password.,recover_password
+Please delete my account and all my personal data.,delete_account
+I want to close my account permanently.,delete_account
+How do I remove my account from your site? I don't shop here anymore.,delete_account
+Under GDPR I request that you erase my account.,delete_account
+"Please unsubscribe me from your marketing emails, I get way too many.",newsletter_subscription
+How do I sign up for the newsletter to get discount codes?,newsletter_subscription
+stop sending me promo emails,newsletter_subscription
+I want to change how often I receive your newsletter.,newsletter_subscription
+What are your customer service hours?,contact_customer_service
+Is there a phone number I can call for help?,contact_customer_service
+How can I get in touch with support?,contact_customer_service
+what's the email for customer support,contact_customer_service
+I don't want to talk to a bot. Let me speak to a real person.,contact_human_agent
+Can I please talk to a human agent?,contact_human_agent
+transfer me to a live agent now,contact_human_agent
+"I need to speak with a representative about my issue, not an automated system.",contact_human_agent
+"This is the THIRD time my order has arrived damaged. Absolutely unacceptable service, I want to file a formal complaint.",complaint
+Your delivery driver was extremely rude to me today. I want to complain.,complaint
+I'm very disappointed with how my issue was handled. Who do I complain to?,complaint
+Worst customer experience ever. I've been waiting for weeks and nobody answers. I'm considering a chargeback.,complaint
+I love the headphones I bought! How can I leave a review?,review
+Where do I write product feedback for the coffee maker?,review
+"want to rate my purchase, where do i do that",review
+I'd like to share some feedback about your website experience.,review

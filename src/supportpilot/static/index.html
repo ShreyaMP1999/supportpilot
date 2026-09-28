@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SupportPilot</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --text: #1b1f24; --muted: #5f6b7a; --border: #e2e6eb;
+    --accent: #3b5bdb; --accent-soft: #edf2ff;
+    --p1: #c92a2a; --p2: #e8590c; --p3: #1971c2; --p4: #5c940d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111418; --panel: #1a1e24; --text: #e7eaee; --muted: #9aa5b1; --border: #2b313a;
+      --accent: #748ffc; --accent-soft: #1f2640;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+  header { padding: 18px 24px; border-bottom: 1px solid var(--border); background: var(--panel); display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  header h1 { margin: 0; font-size: 20px; }
+  header span { color: var(--muted); font-size: 13px; }
+  main { max-width: 1200px; margin: 0 auto; padding: 20px 16px; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 20px; }
+  @media (max-width: 860px) { main { grid-template-columns: 1fr; } }
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 20px; }
+  h2 { font-size: 15px; margin: 0 0 12px; }
+  textarea { width: 100%; min-height: 110px; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--text); font: inherit; resize: vertical; }
+  button { background: var(--accent); color: #fff; border: 0; border-radius: 8px; padding: 9px 16px; font: inherit; font-weight: 600; cursor: pointer; }
+  button:disabled { opacity: .6; cursor: wait; }
+  .examples { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 14px; }
+  .chip { background: var(--accent-soft); color: var(--accent); border: 0; border-radius: 999px; padding: 4px 10px; font-size: 12.5px; font-weight: 500; cursor: pointer; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-bottom: 14px; }
+  .stat { border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
+  .stat .label { color: var(--muted); font-size: 12px; }
+  .stat .value { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
+  .badge { display: inline-block; padding: 1px 8px; border-radius: 6px; color: #fff; font-weight: 700; font-size: 12.5px; }
+  .P1 { background: var(--p1); } .P2 { background: var(--p2); } .P3 { background: var(--p3); } .P4 { background: var(--p4); }
+  .reply { white-space: pre-wrap; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+  .muted { color: var(--muted); font-size: 13px; }
+  .escalate { border-left: 4px solid var(--p2); padding: 8px 12px; background: var(--bg); border-radius: 6px; margin-bottom: 14px; }
+  ul { margin: 6px 0; padding-left: 18px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td, th { text-align: left; padding: 6px 4px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 500; }
+  .bar { height: 8px; background: var(--accent); border-radius: 4px; }
+  .bar-row { display: grid; grid-template-columns: 130px 1fr 34px; gap: 8px; align-items: center; font-size: 13px; margin: 4px 0; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>SupportPilot</h1>
+  <span id="health">connecting…</span>
+</header>
+<main>
+  <section>
+    <div class="card">
+      <h2>New ticket</h2>
+      <textarea id="ticket" placeholder="Paste a customer message…"></textarea>
+      <div class="examples" id="examples"></div>
+      <button id="submit">Triage &amp; draft reply</button>
+    </div>
+    <div class="card hidden" id="result">
+      <h2>Result</h2>
+      <div id="escalation"></div>
+      <div class="grid" id="summary"></div>
+      <h2>Why this priority</h2>
+      <ul id="reasons"></ul>
+      <h2>Drafted reply <span class="muted" id="backend"></span></h2>
+      <div class="reply" id="reply"></div>
+      <p class="muted" id="notes"></p>
+      <h2>Knowledge-base sources</h2>
+      <table><thead><tr><th>Article</th><th>Title</th><th>Score</th></tr></thead><tbody id="articles"></tbody></table>
+    </div>
+  </section>
+  <aside>
+    <div class="card">
+      <h2>Queue analytics</h2>
+      <div class="grid" id="stats"></div>
+      <div id="teams"></div>
+    </div>
+    <div class="card">
+      <h2>Recent tickets</h2>
+      <table><thead><tr><th>#</th><th>Ticket</th><th>Pri</th><th>Intent</th></tr></thead><tbody id="recent"></tbody></table>
+    </div>
+  </aside>
+</main>
+<script>
+const EXAMPLES = [
+  "I was charged twice for order #A-4821!! This is the third time. Fix it immediately or I'm filing a chargeback.",
+  "hey how long does express shipping take to Denver?",
+  "I forgot my password and the reset email never arrives, my email is jane.doe@example.com",
+  "Please cancel my order, I ordered the wrong size. Will there be a fee?",
+  "Can I talk to a real person please",
+];
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const stat = (label, value) => `<div class="stat"><div class="label">${label}</div><div class="value">${value}</div></div>`;
+
+EXAMPLES.forEach((text) => {
+  const b = document.createElement("button");
+  b.className = "chip";
+  b.textContent = text.length > 48 ? text.slice(0, 46) + "…" : text;
+  b.onclick = () => { $("ticket").value = text; };
+  $("examples").appendChild(b);
+});
+
+async function api(path, options) {
+  const res = await fetch(path, options);
+  if (!res.ok) throw new Error(`${res.status} ${await res.text()}`);
+  return res.json();
+}
+
+function render(r) {
+  $("result").classList.remove("hidden");
+  $("escalation").innerHTML = r.escalate
+    ? `<div class="escalate"><strong>Escalate to ${esc(r.team)}</strong><ul>${r.escalation_reasons.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`
+    : "";
+  const alts = r.alternatives.map((a) => `${a.intent} ${(a.confidence * 100).toFixed(0)}%`).join(", ");
+  $("summary").innerHTML =
+    stat("Intent", `${esc(r.intent)}<div class="muted">${(r.confidence * 100).toFixed(1)}% · alt: ${esc(alts)}</div>`) +
+    stat("Priority", `<span class="badge ${r.priority}">${r.priority}</span>`) +
+    stat("Route to", esc(r.team)) +
+    stat("Category", esc(r.category)) +
+    stat("Latency", `${r.latency_ms.total} ms`);
+  $("reasons").innerHTML = r.priority_reasons.length
+    ? r.priority_reasons.map((x) => `<li>${esc(x)}</li>`).join("")
+    : "<li class='muted'>No risk signals detected</li>";
+  $("reply").textContent = r.reply;
+  $("backend").textContent = `· ${r.reply_backend}${r.grounded ? " · grounded" : " · NOT grounded"}`;
+  $("notes").textContent = r.notes.join(" · ");
+  $("articles").innerHTML = r.articles
+    .map((a) => `<tr><td>${esc(a.id)}${r.citations.includes(a.id) ? " ✓" : ""}</td><td>${esc(a.title)}</td><td>${a.score.toFixed(3)}</td></tr>`)
+    .join("");
+}
+
+async function refreshSidebar() {
+  const [s, recent] = await Promise.all([api("/v1/stats"), api("/v1/tickets?limit=12")]);
+  $("stats").innerHTML =
+    stat("Tickets", s.total) +
+    stat("Escalation rate", `${(s.escalation_rate * 100).toFixed(0)}%`) +
+    stat("Avg confidence", s.avg_confidence.toFixed(2)) +
+    stat("Avg latency", `${s.avg_latency_ms} ms`);
+  const max = Math.max(1, ...Object.values(s.by_team));
+  $("teams").innerHTML = Object.entries(s.by_team)
+    .map(([team, n]) => `<div class="bar-row"><span>${esc(team)}</span><div class="bar" style="width:${(n / max) * 100}%"></div><span>${n}</span></div>`)
+    .join("");
+  $("recent").innerHTML = recent
+    .map((t) => `<tr><td>${t.id}</td><td>${esc(t.text.slice(0, 70))}${t.text.length > 70 ? "…" : ""}</td><td><span class="badge ${t.priority}">${t.priority}</span></td><td>${esc(t.intent)}</td></tr>`)
+    .join("");
+}
+
+$("submit").onclick = async () => {
+  const text = $("ticket").value.trim();
+  if (text.length < 3) return;
+  $("submit").disabled = true;
+  try {
+    render(await api("/v1/tickets", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text }) }));
+    await refreshSidebar();
+  } catch (e) {
+    alert(e.message);
+  } finally {
+    $("submit").disabled = false;
+  }
+};
+
+api("/health")
+  .then((h) => { $("health").textContent = `${h.intents} intents · classifier: ${h.classifier} · retrieval: ${h.retrieval} · replies: ${h.generator}`; })
+  .catch(() => { $("health").textContent = "API unreachable"; });
+refreshSidebar().catch(() => {});
+</script>
+</body>
+</html>
