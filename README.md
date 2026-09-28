@@ -11,7 +11,7 @@ SupportPilot reads an incoming customer message and, in ~50 ms (excluding the op
 
 Everything ships as a FastAPI service with a web dashboard, a SQLite ticket log, tests, Docker and CI.
 
-![CI](https://github.com/YOUR_USERNAME/supportpilot/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/ShreyaMP1999/supportpilot/actions/workflows/ci.yml/badge.svg)
 
 ---
 
@@ -109,7 +109,7 @@ On the escalation threshold: on the dev half, 0.3 met a 95% accuracy target (89%
 ## Quickstart
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/supportpilot.git && cd supportpilot
+git clone https://github.com/ShreyaMP1999/supportpilot.git && cd supportpilot
 python -m venv .venv && source .venv/bin/activate
 make install        # dependencies
 make train          # downloads the dataset (~19 MB), trains, writes reports/classifier_metrics.json
